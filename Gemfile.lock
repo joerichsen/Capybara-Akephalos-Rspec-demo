@@ -59,6 +59,7 @@ GEM
       abstract (>= 1.0.0)
     ffi (0.6.3)
       rake (>= 0.8.7)
+    haml (3.0.24)
     i18n (0.4.2)
     jruby-jars (1.5.5)
     json_pure (1.4.6)
@@ -127,6 +128,7 @@ DEPENDENCIES
   capybara
   database_cleaner
   devise
+  haml
   launchy
   mysql2
   rails (= 3.0.3)
