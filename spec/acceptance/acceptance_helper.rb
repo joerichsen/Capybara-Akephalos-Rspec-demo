@@ -5,7 +5,8 @@ require 'capybara/rails'
 module Steak::Capybara
   include Rack::Test::Methods
   include Capybara
-  
+  include ActionView::Helpers::UrlHelper
+
   def app
     ::Rails.application
   end
