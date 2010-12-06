@@ -9,6 +9,7 @@ describe "User handling", :type => :acceptance do
 
   it 'should demo some javascript', :js => true do
     click 'sign up'
+    find('//*[@id="user_zipcode"]').should be_visible
     element = locate('#user_zipcode')
     element.should be_visible
 
@@ -20,13 +21,9 @@ describe "User handling", :type => :acceptance do
     Zipcode.create(:zipcode => '8000', :city => 'Århus C')
 
     click 'sign up'
-    fill_in 'Email', :with => 'joe@erichsen.net'
-    fill_in 'Password', :with => 'verysecret'
-    fill_in 'Password confirmation', :with => 'verysecret'
     fill_in 'Zipcode', :with => '8000'
-    click_button 'Sign up'
-
-    User.last.city.should == 'Århus C'
+    fill_in 'Email', :with => 'joe@erichsen.net'
+    page.should have_content('Århus C')
   end
 
   it "should be possible to sign up" do
