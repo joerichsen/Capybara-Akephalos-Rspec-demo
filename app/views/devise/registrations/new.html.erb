@@ -12,7 +12,32 @@
   <p><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></p>
 
+  <p><%= f.label :zipcode %><br />
+  <%= f.text_field :zipcode %></p>
+
+  <p><%= f.label :city %><br />
+  <%= f.text_field :city %></p>
+
   <p><%= f.submit "Sign up" %></p>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>
+<%= Rails.env %>
+<%= Zipcode.count %>
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+    var zipcode = new Object;
+    <%- for zipcode in Zipcode.all %>
+    zipcode['<%= zipcode.zipcode %>'] = '<%= zipcode.city %>';
+    <% end %>
+
+    $('#user_zipcode').blur(function() {
+      $('#user_city').val(zipcode[$(this).val()]);
+    });
+
+  });
+
+</script>
+
