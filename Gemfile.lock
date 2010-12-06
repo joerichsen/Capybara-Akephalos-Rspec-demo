@@ -49,6 +49,7 @@ GEM
     childprocess (0.1.4)
       ffi (~> 0.6.3)
     configuration (1.2.0)
+    crack (0.1.8)
     culerity (0.2.12)
     database_cleaner (0.6.0)
     devise (1.1.5)
@@ -109,6 +110,9 @@ GEM
       rails (~> 3.0.0)
       rspec (~> 2.2)
     rubyzip (0.9.4)
+    savon (0.7.9)
+      builder (>= 2.1.2)
+      crack (>= 0.1.4)
     selenium-webdriver (0.1.0)
       childprocess (= 0.1.4)
       ffi (~> 0.6.3)
@@ -137,4 +141,5 @@ DEPENDENCIES
   mysql2
   rails (= 3.0.3)
   rspec-rails
+  savon
   steak

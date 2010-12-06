@@ -6,6 +6,7 @@ gem 'mysql2'
 gem 'devise'
 gem 'haml'
 gem 'jquery-rails'
+gem 'savon'
 
 group :development, :test do
   gem 'rspec-rails'
