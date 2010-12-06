@@ -7,6 +7,15 @@ describe "User handling", :type => :acceptance do
     visit front_page
   end
 
+  it 'should demo some javascript', :js => true do
+    click 'sign up'
+    element = locate('#user_zipcode')
+    element.should be_visible
+
+    element.hide!
+    element.should_not be_visible
+  end
+
   it 'should autocomplete when the zipcode is entered', :js => true do
     Zipcode.create(:zipcode => '8000', :city => 'Århus C')
 
@@ -41,5 +50,6 @@ describe "User handling", :type => :acceptance do
 
     page.should have_content('Signed in successfully')
   end
+
 
 end
