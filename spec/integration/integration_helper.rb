@@ -12,7 +12,7 @@ module Steak::Capybara
   end
 end
 
-RSpec.configuration.include Steak::Capybara, :type => :acceptance
+RSpec.configuration.include Steak::Capybara, :type => :integration
 
-# Put your acceptance spec helpers inside /spec/acceptance/support
+# Put your integration spec helpers inside /spec/integration/support
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}

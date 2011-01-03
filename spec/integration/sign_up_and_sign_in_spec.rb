@@ -1,7 +1,7 @@
 # encoding: utf-8
-require File.expand_path(File.dirname(__FILE__) + '/acceptance_helper')
+require File.expand_path(File.dirname(__FILE__) + '/integration_helper')
 
-describe "User handling", :type => :acceptance do
+describe "User handling", :type => :integration do
 
   before :each do
     visit front_page

@@ -32,4 +32,4 @@ module ElementHelpers
   end
 end
 
-RSpec.configuration.include ElementHelpers, :type => :acceptance
+RSpec.configuration.include ElementHelpers, :type => :integration
